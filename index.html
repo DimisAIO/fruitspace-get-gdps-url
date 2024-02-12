@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FruitSpace => GDPS Url</title>
+    <style>
+        body {
+            color: cornflowerblue;
+            background-color: black;
+            font-size: 2vh;
+        }
+        p {
+            font-size: 1.75vh;
+        }
+        input {
+            width: 40vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>FruitSpace2GDPSUrl</h1>
+        <input type="text" id="url" placeholder="https://gofruit.space/gdps/03bO" /><br>
+        <p id="r">Result</p>
+        <button onclick="e()">Run</button>
+    </center>
+    <script>
+        function e() {
+            let a
+            a = document.getElementById("url").value;
+            a = a.replace("https://gofruit.space/gdps/", "");
+            document.getElementById("r").innerHTML = `https://rugd.gofruit.space/${a}/db`;
+        }
+    </script>
+</body>
+</html>
